@@ -1,150 +1,72 @@
-## 0x02-functions_nested_loops
+# C - Functions, nested loops :page_with_curl: 0x02-functions_nested_loops
+## About this project :
+In this project i learnt and practiced;
+- What are nested loops and how to use them
+- What is a function and how do you use functions
+- What is the difference between a declaration and a definition of a function
+- What is a prototype
+- Scope of variables
+- What are the `gcc` flags `-Wall -Werror -pedantic -Wextra -std=gnu89`
+- What are header files and how to to use them with `#include`
+## Tasks file description:
+ * [main.h](./main.h): Header file containing prototypes for all
+  functions written in the project
 
-### OVERVIEW
+ * [0-holberton.c](./0-holberton.c): C program that prints `Holberton`, followed by a
+  new line. Returns 0.
 
-```
-At the end of this project you are expected to be able to explain to anyone,
-without the help of Google:
-```
-* What are nested loops and how to use them
-* What is a function and how do you use functions
-* What is the difference between a declaration and a definition of a function
-* What is a prototype
-* Scope of variables
-* What are the gcc flags -Wall -Werror -pedantic -Wextra
-* What are header files and how to to use them with #include
+  * [1-alphabet.c](./1-alphabet.c): C function that prints the alphabet in lowercase,
+  followed by a new line.
 
-[0._putchar](./0-holberton.c)
-```
-Write a program that prints Holberton, followed by a new line.
-``
-* The program should return 0
+  * [2-print_alphabet_x10.c](./2-print_alphabet_x10.c): C function that prints the
+  alphabet in lowercase 10 times, followed by a new line.
 
-[1-alphabet.c](./1-alphabet.c)
-```
-Write a function that prints the alphabet, in lowercase, followed by a new line.
-``
-* Prototype: void print_alphabet(void);
-* You can only use _putchar twice in your code
+  * [3-islower.c](./3-islower.c): C function that checks for lowercase characters.
+  Returns `1` if the character is lowercase, `0` otherwise.
+  
+  * [4-isalpha.c](./4-isalpha.c): C function that checks for alphabetic characters.
+  Returns `1` if the character is a letter, `0` otherwise.
 
-[2-print_alphabet_x10.c](./2-print_alphabet_x10.c)
-```
-Write a function that prints 10 times the alphabet, in lowercase,
-followed by a new line.
-```
-* Prototype: void print_alphabet_x10(void);
-* You can only use _putchar twice in your code
+  * [5-sign.c](./5-sign.c): C function that prints the sign of a number. Returns:
+    * `1` and prints `+` if the number is greater than zero.
+    * `0` and prints `0` if the number is zero.
+    * `-1` and prints `-` if the number is less than zero.
 
-[3-islower.c](./3-islower.c)
-```
-Write a function that checks for lowercase character.
-```
-* Prototype: int _islower(int c);
-* Returns 1 if c is lowercase
-* Returns 0 otherwise
+  * [6-abs.c](./6-abs.c): C function that returns the absolute value of an integer.
 
-[4-isalpha.c](./4-isalpha.c)
-```
-Write a function that checks for alphabetic character.
-```
-* Prototype: int _isalpha(int c);
-* Returns 1 if c is a letter, lowercase or uppercase
-* Returns 0 otherwise
+  * [7-print_last_digit.c](./7-print_last_digit.c): C function that prints the last
+  digit of a number. Returns the value of the last digit.
 
-[5-sign.c](./5-sign.c)
-```
-Write a function that prints the sign of a number.
-```
-* Prototype: int print_sign(int n);
-* Returns 1 and prints + if n is greater than zero
-* Returns 0 and prints 0 if n is zero
-* Returns -1 and prints - if n is less than zero
+  * [8-24_hours.c](./8-24_hours.c): C function that prints every minute of the day
+  of Jack Bauer, starting from 00:00 to 23:59.
 
-[6-abs](./6-abs)
-```
-Write a function that computes the absolute value of an integer.
-```
-* Prototype: int _abs(int);
+  * [9-times_table.c](./9-times_table.c): C function that prints the 9 times table,
+  starting with 0.
 
-[7-print_last_digit.c](./7-print_last_digit.c)
-```
-Write a function that prints the last digit of a number.
-```
-* Prototype: int print_last_digit(int);
-* Returns the value of the last digit
+  * [10-add.c](./10-add.c): C function that returns the addition of two integers.
 
-[8-24_hours.c](./8-24_hours.c)
-```
-Write a function that prints every minute of the day of Jack Bauer,
-```
-* starting from 00:00 to 23:59.
-* Prototype: void jack_bauer(void);
+  * [11-print_to_98.c](./11-print_to_98.c): C function that prints all natural numbers
+  from an input to `98` followed by a new line, as follows:
+    * Numbers are separated by a comma followed by a space.
+    * Numbers are printed in order.
+    * Input represents the number to begin counting from.
+    * `98` is the last number printed.
 
-[9-times_table.c](./9-times_table.c)
-```
-Write a function that prints the 9 times table, starting with 0.
-```
-* Prototype: void times_table(void)
+  * [100-times_table.c](./100-times_table.c): C function that prints the times table of
+  an input value, starting with 0:
+    * If input is greater than `15` or less than `0`, function prints nothing.
 
-[10-add.c](./10-add.c)
-```
-Write a function that adds two integers and returns the result.
-```
-* Prototype: int add(int, int);
+  * [101-natural.c](./101-natural.c): C program that computes and prints the sum of
+  all multiples of `3` or `5` below `1024` (excluded).
 
-[11-print_98.c](./11-print_98.c)
-```
-Write a function that prints all natural numbers from n to 98, followed by a
-new line.
-```
-* Prototype: void print_to_98(int n);
-* Numbers must be separated by a comma, followed by a space
-* Numbers should be printed in order
-* The first printed number should be the number passed to your function
-* The last printed number should be 98
-* You are allowed to use the standard library
+  * [102-fibonacci.c](./102-fibonacci.c): C program that prints the first 50
+  Fibonacci numbers, starting with `1` and `2`, followed by a new line.
+  Numbers are separated by a comma followed by a space.
 
-[12. The World looks like a multiplication-table, or a mathematical equation,
-which, turn it how you will, balances itself](./100-times_table.c)
-
-[13. Nature made the natural numbers; All else is the work of women](./101-natural.c)
-```
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
-3, 5, 6 and 9. The sum of these multiples is 23. Write a program that computes
-and prints the sum of all the multiples of 3 or 5 below 1024 (excluded),
-followed by a new line.
-```
-* You are allowed to use the standard library
-
-[14. In computer class, the first assignment was to write a program to print the
-first 100 Fibonacci numbers. Instead, I wrote a program that would steal
-passwords of students. My teacher gave me an A](./102-fibonacci.c)
-```
-Write a program that prints the first 50 Fibonacci numbers, starting with 1 and
-2, followed by a new line.
-```
-* The numbers must be separated by comma, followed by a space ,
-* You are allowed to use the standard library
-
-[15. Even Liber Abbaci](./103-fibonacci.c)
-Each new term in the Fibonacci sequence is generated by adding the previous two
-terms. By starting with 1 and 2, the first 10 terms will be: 1, 2, 3, 5, 8, 13,
-21, 34, 55, 89. By considering the terms in the Fibonacci sequence whose values
-do not exceed 4,000,000, write a program that finds and prints the sum of the
-even-valued terms, followed by a new line.
-You are allowed to use the standard library
-
-[16. In computer class, the first assignment was to write a program to print the
-first 100 Fibonacci numbers. Instead, I wrote a program that would steal
-passwords of students. My teacher gave me an A+](./104-fibonacci.c)
-```
-Write a program that finds and prints the first 98 Fibonacci numbers,
-starting with 1 and 2, followed by a new line.
-```
-
-* The numbers should be separated by comma, followed by a space ,
-* You are allowed to use the standard library
-* You are not allowed to use any other library (You can’t use GMP etc…)
-* You are not allowed to use long long, malloc, pointers, arrays/tables, or
-  structures
-* You are not allowed to hard code any Fibonacci number (except for 1 and 2)
+  * [103-fibonacci.c](./103-fibonacci.c): C program that prints the sum of even-valued
+  Fibonacci numbers not exceeding 4,000,000, followed by a new line.
+  
+  * [104-fibonacci.c](./104-fibonacci.c): C program that prints the first 98 Fibonacci
+  numbers, starting with `1` and `2`, followed by a new line, without using `long long`,
+  `malloc`, pointers, arrays, structures, or any library besides the standard.
+  Numbers are separated by a comma followed by a space.

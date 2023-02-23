@@ -1,29 +1,32 @@
 #include <stdio.h>
+
 /**
- * main - main function
+ * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
+ *        separated by a comma followed by a space.
+ *        fib's next no. is addition of last two numbers.
  *
- * Return: nothing
+ *
+ *
+ * Return: 0 if succesful
  */
 int main(void)
 {
-	int counter = 2;
-	long int a = 1;
-	long int b = a + 1;
-	long int c = a + b;
+	int loop;
+	unsigned long f1 = 0, f2 = 1, fib;
 
-	printf("%ld, %ld, ", a, b);
-	while (counter < 50)
+	for (loop = 0; loop < 50; loop++)
 	{
-		printf("%ld", c);
-		counter++;
-		a = b;
-		b = c;
-		c = a + b;
-		if (counter < 50)
-		{
+		fib = f1 + f2;
+		printf("%lu", fib);
+
+		f1 = f2;
+		f2 = fib;
+
+		if (loop == 49)
+			printf("\n");
+		else
 			printf(", ");
-		}
 	}
-	printf("\n");
+
 	return (0);
 }
